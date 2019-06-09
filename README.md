@@ -21,10 +21,21 @@ alias=<your unique alias name, visible on ln explorer>
 rgb=<RGB color of your node on the ln explorer>
 ipaddr=<your public ip address>
 ```
-save the file, below is an example
+save the file, below is an example:
 ```
 alias=phba2061
 rgb=FF00FF
 ipaddr=32.180.1.2
 ```
-### 3) Once you finish installing
+### 3) After installing Chips3, Lightning, Betpoker & Pangea, and CHIPS finish syncing 
+launch lightningd (I usually launch it in a tmux session)
+```
+sudo apt-get install tmux
+tmux new -s lightning
+lightningd --log-level=debug &
+```
+CTRL + B, then D to detach from the tmux session.
+to get your lightning address
+```
+lightning-cli dev-listaddrs
+```
