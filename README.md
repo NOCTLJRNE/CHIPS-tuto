@@ -1,1 +1,1 @@
-How to configurate & play poker with CHIPS
+# How to configurate & play poker with CHIPS
