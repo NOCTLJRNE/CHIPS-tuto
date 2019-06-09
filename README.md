@@ -15,4 +15,16 @@ cd
 mkdir .chipsln
 nano config
 ``` 
+Enter these lines in the config file:
+```
+alias=<your unique alias name, visible on ln explorer>
+rgb=<RGB color of your node on the ln explorer>
+ipaddr=<your public ip address>
+```
+save the file, below is an example
+```
+alias=phba2061
+rgb=FF00FF
+ipaddr=32.180.1.2
+```
 ### 3) Once you finish installing
