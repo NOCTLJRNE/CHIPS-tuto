@@ -8,5 +8,11 @@
 ```
 chipsd -addnode=144.217.10.241 -addnode=192.99.19.160 &
 ```
-You can add as many nodes as you want, the nodes list can be found [here](http://chips.komodochainz.info/network)
+You can add as many nodes as you want, the nodes list can be found [here](http://chips.komodochainz.info/network).
+Create chipsln folder and config file:
+```
+cd
+mkdir .chipsln
+nano config
+``` 
 ### 3) Once you finish installing
