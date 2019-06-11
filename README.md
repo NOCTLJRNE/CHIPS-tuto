@@ -1,11 +1,11 @@
 # How to configurate & play poker with CHIPS
-### This tuto uses materials from:
+### This guide uses materials from:
 https://docs.chips.cash/en/latest/install-ln.html
 
 https://github.com/sg777/bet
 
 https://www.youtube.com/channel/UCCIUvenhfwYjoKN1WJGhK6A
-### This tuto is succesfully tested with 4 Google Cloud VPS, 1 CPU, 5GB RAM, 10 GB SSD, Ubuntu 16.04. If you run into any issue, please let me know in [CHIPS Discord](https://discordapp.com/channels/455737840169386016/455737840668770315) @PHBA2061#2530
+### This guide is succesfully tested with 4 Google Cloud VPS, 1 CPU, 5GB RAM, 10 GB SSD, Ubuntu 16.04. If you run into any issue, please let me know in [CHIPS Discord](https://discordapp.com/channels/455737840169386016/455737840668770315) @PHBA2061#2530
 
 ### 1) Create 4 VM instances on Google Cloud...
 ...with the specs above (or you can create just 1 instance and later clone it 3 times with a snapshot). Create Firewall rules (Ingress rules) that allow all traffics (I was too lazy to individually open each single port :joy:).
