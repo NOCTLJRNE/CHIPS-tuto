@@ -58,11 +58,17 @@ Wait for the transactions to be confirmed:
 ```
 lightning-cli listfunds
 ```
-returned result
+returned result:
 ```
 { "outputs" : 
 	[ 
-		{ "txid" : "f9aeeaee05aff0ae9600dd2bb7e0fc2bacb2f0dc6a34208470082fe7198dcb6e", "output" : 0, "value" : 10000000, "status" : "confirmed" } ], "channels" : 
-	[  ] }
-
+		{ "txid" : "f9aeeaee05aff0ae9600dd2bb7e0fc2bacb2f0dc6a34208470082fe7198dcb6e", "output" : 0, "value" : 10000000, "status" : "confirmed" } ], 
+		"channels" : [  ] }
+```
+then, on all 4 nodes:
+```
+cd ~
+cd bet/privatebet
+git checkout poker
+make
 ```
