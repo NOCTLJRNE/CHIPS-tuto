@@ -120,5 +120,20 @@ This is the proof that the channel between the DCV & BVV is establishing, wait f
 Notice the **short_channel_id** field, it means the channel has succesfully established.
 On a 3rd node (this is going to be the PLAYER 1 node), enter:
 ```
-./bet player **PUBLIC_IP_OF_DCV**
+./bet player PUBLIC_IP_OF_DCV
+```
+similarly you should see the **CHANNELD_AWAITING_LOCKIN** on your PLAYER1 node, and enter **lightning-cli listfunds** on your DCV will return 1 more **peer_id**, wait until you see the **short_channel_id** of the 2nd peer on your DCV node.
+Then repeat the same step on the 4th node (PLAYER 2), enter:
+```
+./bet player PUBLIC_IP_OF_DCV
+```
+wait for a moment, **lightning-cli listfunds** on your DCV should return:
+```
+{ "outputs" :
+        [{ "txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8", "output" : 1, "value" : 9499823, "status" : "confirmed" } ], 
+	"channels" :
+        [{ "peer_id" : "03021bcb106f96319bf0c10ed264204ca71199e0dc4d5f130d5abb60c4fc8c2c6a", "short_channel_id" : "3884093:1:0", "channel_sat" : 500000, "channel_total_sat" : 500000, "funding_txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8" },
+         { "peer_id" : "03d46f6abf82ffe43ad1a34656a6dc60273ee8197c3e87a19f8a58cb23635cb810", "short_channel_id" : "3884162:1:0", "channel_sat" : 0, "channel_total_sat" : 500000, "funding_txid" : "1469f88816cc0c7ebf2dc31ba4d8ba2189d0af67b80d850c25ccaa821216ce87" },
+         { "peer_id" : "0336ace765253420bc1b269f5c41ee4e8e9ac3a66b105791e18057dbcb696d15e1", "short_channel_id" : "3884192:1:0", "channel_sat" : 0, "channel_total_sat" : 500000, "funding_txid" : "f3c815429f86918bffb8ef62ae4b49e3c0645bba716584762bf7e9a16000e87a" } ] }
+
 ```
