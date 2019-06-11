@@ -149,6 +149,23 @@ wait for a moment, **lightning-cli listfunds** on your DCV should return:
 Now open a 2nd SSH instance on your BVV node and enter **lightning-cli listfunds**, if you see only 1 peer, then it probably stuck, **CTRL + C** to kill the bet process on all your 4 nodes, then restart it starting from the DCV => BVV => PLAYER1 => PLAYER2 , you don't have to wait this time.
 This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for a moment, the game should be ready.
 ![Game's ready](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20ready.JPG)
-Follow the instructions the play the game, the unit is in milli-satoshi.
+Follow the instructions the play the game, the unit is in milli-satoshi. Press **CTRL + C** to quit.
 ### 4) Playing with the web GUI on bet, rest_dev branch (to be update)
-After establishing the channels & veryfing the cli works correctly, we can now try to play via the web GUI. 
+After establishing the channels & veryfing the cli works correctly, we can now try to play via the web GUI.
+Switch to **rest_dev** branch then compile:
+```
+cd ~/bet/privatebet
+git checkout rest_dev
+make
+```
+Navigate into pangea-poker folder
+```
+cd ~/pangea-poker-frontend/client
+git checkout poker
+nano pangeapoker.js
+```
+Navigate to this line https://github.com/sg777/pangea-poker-frontend/blob/poker/client/pangeapoker.js#L521 by pressing **CTRL + :** then enter 521 + ENTER, replace the existing IP by your DCV node's public IP:
+```
+pangea.wsURI = 'ws://159.69.23.30:9000'//'ws://localhost:9000'
+```
+Replace the IP of DCV , BVV & PLAYER1&2 by your nodes IP in pangea
