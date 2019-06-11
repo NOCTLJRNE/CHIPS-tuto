@@ -81,7 +81,7 @@ returned result:
 ```
 10.166.0.13
 ```
-The returned IP  will be used as parameter of the DCV node. On the same node, enter:
+The returned IP will be used as parameter of the DCV node (this could be a public/exrernal or private/internal IP, in case of my VPS on Google Cloud, it returns an internal IP). On the same node, enter:
 ```
 ./bet dcv 10.166.0.13
 ```
