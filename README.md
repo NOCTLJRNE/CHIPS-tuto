@@ -28,7 +28,7 @@ alias=<your unique alias name, visible on ln explorer>
 rgb=<RGB color of your node on the ln explorer>
 ipaddr=<your public ip address>
 ```
-save the file, below is an example:
+save the file by pressing **CTRL+X , then Y then ENTER**, below is an example:
 ```
 alias=phba2061
 rgb=FF00FF
@@ -168,4 +168,23 @@ Navigate to this line https://github.com/sg777/pangea-poker-frontend/blob/poker/
 ```
 pangea.wsURI = 'ws://159.69.23.30:9000'//'ws://localhost:9000'
 ```
-Replace the IP of DCV , BVV & PLAYER1&2 by your nodes IP in pangea
+Then also replace th DCV & PLAYERS IP with your nodes's IP:
+```
+pangea.wsURI_bvv = 'ws://159.69.23.31:9001'
+pangea.wsURI_player1 = 'ws://159.69.23.28:9002'
+pangea.wsURI_player2 = 'ws://159.69.23.29:9003'
+```
+Then save the files.
+Head back to the bet/privatebet folder, enter **./bet** on all four nodes.
+```
+cd ~/bet/privatebet
+./bet
+```
+IMAGE HERE
+open a new SSH instance on you DCV node, launch Mylo's chips-in-a-box installer then choose **startserving**
+Open a new webpage then enter
+```
+35.228.250.250:7777
+```
+replace the IP address with your DCV node public IP, you should see:
+IMAGE HERE
