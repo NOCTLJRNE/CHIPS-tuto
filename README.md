@@ -5,7 +5,7 @@
 ...with the specs above (or you can create just 1 instance and later clone it 3 times with a snapshot). Create Firewall rules (Ingress rules) that allow all traffics (I was too lazy to individually open each single port :joy:).
 ![Firewall rules](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/allow%20all%20traffic.JPG)
 ### 2) Clone Mylo's chips-in-a-box and follow the istructions:
-[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). Install following this order: Chips3 => Lightning => Betpoker => Pangea . Immediately after finishing Chips3 and before installing the other 3, launch chipsd:
+[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). Install following this order: Chips3 => Lightning => Betrest => Pangea . Immediately after finishing Chips3 and before installing the other 3, launch chipsd:
 ```
 chipsd -addnode=144.217.10.241 -addnode=192.99.19.160 &
 ```
@@ -28,7 +28,7 @@ alias=phba2061
 rgb=FF00FF
 ipaddr=32.180.1.2
 ```
-### 3) After installing Chips3, Lightning, Betpoker & Pangea, and CHIPS finish syncing 
+### 3) After installing Chips3, Lightning, Betrest & Pangea, and CHIPS finish syncing 
 launch lightningd (I usually launch it in a tmux session)
 ```
 sudo apt-get install tmux
