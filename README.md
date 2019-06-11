@@ -90,7 +90,7 @@ On a 2nd node (this is going to be the BVV), enter:
 ```
 ./bet bvv 35.228.250.250
 ```
-35.228.250.250 is the public IP of your DCV node, on your DCV node, you should see:
+replace 35.228.250.250 by the public IP of your DCV node. Then on your DCV node, you should see:
 ```
  id:03021bcb106f96319bf0c10ed264204ca71199e0dc4d5f130d5abb60c4fc8c2c6a
 CHANNELD_AWAITING_LOCKIN
@@ -116,4 +116,9 @@ This is the proof that the channel between the DCV & BVV is establishing, wait f
   "channels" :
         [{ "peer_id" : "03021bcb106f96319bf0c10ed264204ca71199e0dc4d5f130d5abb60c4fc8c2c6a", "short_channel_id" : "3884093:1:0", "channel_sat" : 500000, "channel_total_sat" : 500000, "funding_txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8" } ] }
 
+```
+Notice the **short_channel_id** field, it means the channel has succesfully established.
+On a 3rd node (this is going to be the PLAYER 1 node), enter:
+```
+./bet player **PUBLIC_IP_OF_DCV**
 ```
