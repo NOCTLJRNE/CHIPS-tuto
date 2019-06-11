@@ -145,3 +145,4 @@ This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for 
 ![Game's ready](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20ready.JPG)
 Follow the instructions the play the game, the unit is in milli-satoshi.
 ### 4) Playing with the web GUI on bet, rest_dev branch (to be update)
+After establishiing the channels & veryfing the cli works correctly, we can now try to play via the web GUI. 
