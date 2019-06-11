@@ -144,3 +144,4 @@ Now open a 2nd SSH instance on your BVV node and enter **lightning-cli listfunds
 This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for a moment, the game should be ready.
 ![Game's ready](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20ready.JPG)
 Follow the instructions the play the game, the unit is in milli-satoshi.
+### 4) Playing with the web GUI on bet, rest_dev branch (to be update)
