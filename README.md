@@ -190,9 +190,12 @@ replace the IP address with your DCV node public IP, you should see:
 ![stage1](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%201.JPG)
 Click on **game** (be lowpangea Poker ) to initialize, you should see player1 & player2 logo pop up
 ![stage2](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%202.JPG)
-Click on player1's seat, wait until player1's cards are dealt, then click on player2's seat
+Click on player1's seat, wait until player1's logo changes, then click on player2's seat, you should see
 ![stage4](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%204.JPG)
-![]()
-![]()
-![]()
-![]()
+The background calculation will now take 2-3 minutes to finish. You will then see: 
+![stage05](https://github.com/NOCTLJRNE/CHIPS-tuto/blob/master/img/game%20stage%205.JPG)
+Now you can play the game againt yourself !
+![flop](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%206%20flop.JPG)
+![turn](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%207%20turn.JPG)
+![river](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%208%20river.JPG)
+![result](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%209%20result.JPG)
