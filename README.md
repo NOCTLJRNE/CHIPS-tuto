@@ -50,4 +50,19 @@ returned result
 		"bech32" : "chips1q6ly9e9de2jt3ce8r8erql3t60l60tjkhl92l0k", 
 		"bech32_redeemscript" : "d7c85c95b954971c64e33e460fc57a7ff4f5cad7" } ] }
 ```
-in the example above, **bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr** is your p2sh deposit address, send 0.1 CHIPS to all 4 p2sh addresses oon 4 nodes.
+in the example above, **bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr** is your p2sh deposit address, send 0.1 CHIPS to all 4 p2sh addresses on 4 nodes (at the moment of writing this guide, Agama wallet was compromised, so you can only use either chips-cli or chips-qt to manage your funds).
+```
+chips-cli sendtoaddress "bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr" 0.1
+```
+Wait for the transactions to be confirmed:
+```
+lightning-cli listfunds
+```
+returned result
+```
+{ "outputs" : 
+	[ 
+		{ "txid" : "f9aeeaee05aff0ae9600dd2bb7e0fc2bacb2f0dc6a34208470082fe7198dcb6e", "output" : 0, "value" : 10000000, "status" : "confirmed" } ], "channels" : 
+	[  ] }
+
+```
