@@ -36,7 +36,14 @@ tmux new -s lightning
 lightningd --log-level=debug &
 ```
 CTRL + B, then D to detach from the tmux session.
-to get your lightning address
+to get your lightning p2sh address
 ```
 lightning-cli dev-listaddrs
 ```
+returned result
+```
+{ "addresses" : 
+	[ 
+		{ "keyidx" : 0, "pubkey" : "031e22b03a269ca681331f3fb1ce885896728ff536fadc4418b1892f63dcb708e2", "p2sh" : "bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr", "p2sh_redeemscript" : "0014d7c85c95b954971c64e33e460fc57a7ff4f5cad7", "bech32" : "chips1q6ly9e9de2jt3ce8r8erql3t60l60tjkhl92l0k", "bech32_redeemscript" : "d7c85c95b954971c64e33e460fc57a7ff4f5cad7" } ] }
+```
+in the example above, **bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr** is your p2sh deposit address, send 0.1 CHIPS to all 4 p2sh addresses oon 4 nodes.
