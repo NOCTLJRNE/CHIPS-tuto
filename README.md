@@ -109,3 +109,11 @@ now you should see:
   "channels" :
         [{ "peer_id" : "03021bcb106f96319bf0c10ed264204ca71199e0dc4d5f130d5abb60c4fc8c2c6a", "channel_sat" : 500000, "channel_total_sat" : 500000, "funding_txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8" } ] }
 ```
+This is the proof that the channel between the DCV & BVV is establishing, wait for a moment and you should see: 
+```
+{ "outputs" :
+        [{ "txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8", "output" : 1, "value" : 9499823, "status" : "confirmed" } ], 
+  "channels" :
+        [{ "peer_id" : "03021bcb106f96319bf0c10ed264204ca71199e0dc4d5f130d5abb60c4fc8c2c6a", "short_channel_id" : "3884093:1:0", "channel_sat" : 500000, "channel_total_sat" : 500000, "funding_txid" : "260455c6dc340cdd2ed643d6b4ea645176d7d335b97dd52f41bd45c2348882b8" } ] }
+
+```
