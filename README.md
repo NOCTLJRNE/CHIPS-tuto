@@ -137,3 +137,8 @@ wait for a moment, **lightning-cli listfunds** on your DCV should return:
          { "peer_id" : "0336ace765253420bc1b269f5c41ee4e8e9ac3a66b105791e18057dbcb696d15e1", "short_channel_id" : "3884192:1:0", "channel_sat" : 0, "channel_total_sat" : 500000, "funding_txid" : "f3c815429f86918bffb8ef62ae4b49e3c0645bba716584762bf7e9a16000e87a" } ] }
 
 ```
+3 peers correspond to the BVV & 2 PLAYERS.
+Now open a 2nd SSH instance on your BVV node and enter **lightning-cli listfunds**, if you see only 1 peer, then it probably stuck, **CTRL + C** to kill the bet process on all your 4 nodes, then restart it starting from the DCV => BVV => PLAYER1 => PLAYER2 , you don't have to wait this time.
+This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for a moment, the game should be ready.
+
+Follow the instructions the play the game, the unit is in milli-satoshi.
