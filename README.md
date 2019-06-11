@@ -180,11 +180,19 @@ Head back to the bet/privatebet folder, enter **./bet** on all four nodes.
 cd ~/bet/privatebet
 ./bet
 ```
-IMAGE HERE
+![rest_dev](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/rest_dev%20bet.JPG)
 open a new SSH instance on you DCV node, launch Mylo's chips-in-a-box installer then choose **startserving**
 Open a new webpage then enter
 ```
 35.228.250.250:7777
 ```
 replace the IP address with your DCV node public IP, you should see:
-IMAGE HERE
+![stage1](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%201.JPG)
+Click on **game** (be lowpangea Poker ) to initialize, you should see player1 & player2 logo pop up
+![stage2](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%202.JPG)
+Click on player1's seat, wait until player1's cards are dealt, then click on player2's seat
+![stage4](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%204.JPG)
+![]()
+![]()
+![]()
+![]()
