@@ -72,3 +72,16 @@ cd bet/privatebet
 git checkout poker
 make
 ```
+We'll need to establish the channels between our nodes, the easiest way to do this is play on the bet/poker branch first and let the back-end handle the establishment.
+On 1 of your node, enter:
+```
+hostname -I
+```
+returned result:
+```
+10.166.0.13
+```
+The returned IP  will be used as parameter of the DCV node. On the same node, enter:
+```
+./bet DCV 10.166.0.13
+```
