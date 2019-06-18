@@ -35,7 +35,16 @@ rgb=FF00FF
 ipaddr=32.180.1.2
 ```
 ### 3) After installing Chips3, Lightning, Betrest & Pangea, and CHIPS finish syncing 
-launch lightningd (I usually launch it in a tmux session)
+If installing Betrest throws these errors:
+```
+Makefile:27: recipe for target 'cards777.o' failed
+make[1]: *** [cards777.o] Error 1
+make[1]: Leaving directory '/home/phba2061/bet/privatebet'
+Makefile:319: recipe for target 'build_dep1' failed
+make: *** [build_dep1] Error 2
+```
+just ignore it for the moment, this error will be resolved later by installing libwebsockets
+Launch lightningd (I usually launch it in a tmux session)
 ```
 sudo apt-get install tmux
 tmux new -s lightning
