@@ -152,6 +152,16 @@ This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for 
 Follow the instructions the play the game, the unit is in milli-satoshi. Press **CTRL + C** to quit.
 ### 4) Playing with the web GUI on bet, rest_dev branch (to be update)
 After establishing the channels & veryfing the cli works correctly, we can now try to play via the web GUI.
+First you need to install libwebsockets:
+```
+cd ~
+git clone https://github.com/sg777/libwebsockets.git
+cd libwebsockets
+mkdir build
+cd build
+cmake ..
+make && sudo make install
+```
 Switch to **rest_dev** branch then compile:
 ```
 cd ~/bet/privatebet
