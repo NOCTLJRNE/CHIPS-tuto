@@ -208,7 +208,7 @@ Open a new webpage then enter
 ```
 replace the IP address with your DCV node public IP, you should see:
 ![stage1](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%201.JPG)
-Click on **game** (be lowpangea Poker ) to initialize, you should see player1 & player2 logo pop up
+Click on **game** (below pangea Poker ) to initialize, you should see player1 & player2 logo pop up
 ![stage2](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%202.JPG)
 Click on player1's seat, wait until player1's logo changes, then click on player2's seat, you should see
 ![stage4](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%204.JPG)
