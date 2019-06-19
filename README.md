@@ -170,6 +170,7 @@ mkdir build
 cd build
 cmake ..
 make && sudo make install
+sudo ldconfig /usr/local/lib
 ```
 Switch to **rest_dev** branch then compile:
 ```
