@@ -48,6 +48,9 @@ Launch lightningd (I usually launch it in a tmux session)
 ```
 sudo apt-get install tmux
 tmux new -s lightning
+```
+Then inside the tmux session you've just created
+```
 lightningd --log-level=debug &
 ```
 CTRL + B, then D to detach from the tmux session.
