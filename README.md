@@ -5,13 +5,13 @@ https://docs.chips.cash/en/latest/install-ln.html
 https://github.com/sg777/bet
 
 https://www.youtube.com/channel/UCCIUvenhfwYjoKN1WJGhK6A
-### This guide is succesfully tested with 4 Google Cloud VPS, 1 CPU, 5GB RAM, 10 GB SSD, Ubuntu 16.04. If you run into any issue, please let me know in [CHIPS Discord](https://discordapp.com/channels/455737840169386016/455737840668770315) @PHBA2061#2530
+### This guide is succesfully tested with 4 Google Cloud VPS (upon creating new account & registering your credit/debit cards, Google Cloud will give you about $200 credits to play around with), 1 CPU, 5GB RAM, 10 GB SSD, Ubuntu 16.04. If you run into any issue, please let me know in [CHIPS Discord](https://discordapp.com/channels/455737840169386016/455737840668770315) @PHBA2061#2530
 
 ### 1) Create 4 VM instances on Google Cloud...
-...with the specs above (or you can create just 1 instance and later clone it 3 times with a snapshot). Create Firewall rules (Ingress rules) that allow all traffics (I was too lazy to individually open each single port :joy:).
+...4 nodes are required in case you want to run a full test setup (2 nodes are required for each dealer & 1 node is required for each player, initial setup will be the same for dealers & players, unless state otherwise) with the specs above (or you can create just 1 instance and later clone it 3 times with a snapshot). Create Firewall rules (Ingress rules) that allow all traffics (I was too lazy to individually open each single port :joy:).
 ![Firewall rules](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/allow%20all%20traffic.JPG)
 ### 2) Clone Mylo's chips-in-a-box and follow the istructions:
-[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). Install following this order: Chips3 => Lightning => Betrest => Pangea . Immediately after finishing Chips3 and before installing the other 3, launch chipsd:
+[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). Install following this order: Chips3 => Lightning. Immediately after finishing chips3 , launch chipsd daemon:
 ```
 chipsd -addnode=144.217.10.241 -addnode=192.99.19.160 &
 ```
