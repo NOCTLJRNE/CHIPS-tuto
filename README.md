@@ -11,7 +11,14 @@ https://www.youtube.com/channel/UCCIUvenhfwYjoKN1WJGhK6A
 ...4 nodes are required in case you want to run a full test setup (2 nodes are required for each dealer & 1 node is required for each player, initial setup will be the same for dealers & players, unless state otherwise) with the specs above (or you can create just 1 instance and later clone it 3 times with a snapshot). Create Firewall rules (Ingress rules) that allow all traffics (I was too lazy to individually open each single port :joy:).
 ![Firewall rules](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/allow%20all%20traffic.JPG)
 ### 2) Clone Mylo's chips-in-a-box and follow the istructions:
-[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). Install following this order: Chips3 => Lightning. Immediately after finishing chips3 , launch chipsd daemon:
+[chips-in-a-box repo link can be found here](https://github.com/proplatformers/chips-in-a-box). 
+Launch the installer by entereing these commands
+```
+cd
+cd chips-in-a-box
+setup/start.sh
+```
+Choose INSTALL, then install following this order: CHIPS => LIGHTNING => BETREST. Immediately after finishing chips3 , launch chipsd daemon:
 ```
 chipsd -addnode=144.217.10.241 -addnode=192.99.19.160 &
 ```
@@ -34,7 +41,7 @@ alias=phba2061
 rgb=FF00FF
 ipaddr=32.180.1.2
 ```
-### 3) After installing Chips3, Lightning, Betrest & Pangea, and CHIPS finish syncing 
+### 3) After installing Chips3, Lightning, Betrest, and CHIPS finish syncing 
 If installing Betrest throws these errors:
 ```
 Makefile:27: recipe for target 'cards777.o' failed
@@ -68,7 +75,7 @@ returned result
 		"bech32" : "chips1q6ly9e9de2jt3ce8r8erql3t60l60tjkhl92l0k", 
 		"bech32_redeemscript" : "d7c85c95b954971c64e33e460fc57a7ff4f5cad7" } ] }
 ```
-in the example above, **bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr** is your p2sh deposit address, send 0.1 CHIPS to all 4 p2sh addresses on 4 nodes (at the moment of writing this guide, Agama wallet was compromised, so you can only use either chips-cli or chips-qt to manage your funds).
+in the example above, **bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr** is your p2sh deposit address, send a small amount of CHIPS (0.1-0.2) to all 4 p2sh addresses on 4 nodes.
 ```
 chips-cli sendtoaddress "bYwk3PgQ2nvoSpb8rVjXPg1J93fG9Br5rr" 0.1
 ```
