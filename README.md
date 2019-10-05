@@ -220,27 +220,12 @@ then relaunch the app with "npm start"
 
 After a few seconds, the app will automatically open a new tab on your browser (http://localhost:1234/), if your front-end is hosted on your local machine. If it is hosted on 1 of your back-end node, simply replace "localhost" by its IP address, then enter the full URL in your browser. You will see:
  ![init_ip](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/INIT%20IP.JPG)
+The IP field should be pre-filled with the values specified in your .env , otherwise you can just manually enter the IP of your nodes.
+#### At this point, it depends on whether you are a dealer, player or both (self-test). If you are a player, you need to find another player to play with and a dealer, and vice versa, send us a message so we can arrange players so you can play together.
+#### If you have 4 nodes, you can test the game by playing with yourself & being the dealer at the same time, I'll update the instructions later, you can also send me a DM in Discord: 
+![dealer_ip](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/dealer%20IP.JPG)
+![dealer_table](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/Dealer.JPG)
+![pl1_sit](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/PLA1%20SIT.JPG)
+![pl2_sit](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/PLA2%20SIT.JPG)
+![players_table](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/2%20PLA%20TURN.JPG)
 
-```
-cd ~/bet/privatebet
-./bet
-```
-![rest_dev](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/rest_dev%20bet.JPG)
-open a new SSH instance on you DCV node, launch Mylo's chips-in-a-box installer then choose **startserving**
-Open a new webpage then enter
-```
-35.228.250.250:7777
-```
-replace the IP address with your DCV node public IP, you should see:
-![stage1](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%201.JPG)
-Click on **game** (below pangea Poker ) to initialize, you should see player1 & player2 logo pop up
-![stage2](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%202.JPG)
-Click on player1's seat, wait until player1's logo changes, then click on player2's seat, you should see
-![stage4](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%204.JPG)
-The background calculation will now take 2-3 minutes to finish. You will then see: 
-![stage05](https://github.com/NOCTLJRNE/CHIPS-tuto/blob/master/img/game%20stage%205.JPG)
-Now you can play the game againt yourself !
-![flop](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%206%20flop.JPG)
-![turn](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%207%20turn.JPG)
-![river](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%208%20river.JPG)
-![result](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20stage%209%20result.JPG)
