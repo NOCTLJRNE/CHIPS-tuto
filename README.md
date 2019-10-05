@@ -218,8 +218,8 @@ npm install -g win-node-env
 ```
 then relaunch the app with "npm start"
 
-After a few seconds, the app will automatically open a new tab on your browser (http://localhost:1234/), if your front-end is hosted on your local machine. If it is hosted on 1 of your back-end node, simply replace "localhost" by its IP address, then enter the full URL in your browser.
- 
+After a few seconds, the app will automatically open a new tab on your browser (http://localhost:1234/), if your front-end is hosted on your local machine. If it is hosted on 1 of your back-end node, simply replace "localhost" by its IP address, then enter the full URL in your browser. You will see:
+ ![init_ip](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/INIT%20IP.JPG)
 
 ```
 cd ~/bet/privatebet
