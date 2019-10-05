@@ -107,12 +107,12 @@ returned result:
 ```
 10.166.0.13
 ```
-The returned IP will be used as parameter of the DCV node (this could be a public/exrernal or private/internal IP, in case of my VPS on Google Cloud, it returns an internal IP). On the same node, enter:
+The returned IP will be used as parameter of the DCV node (Deck Creating Vendor), this could be a public/exrernal or private/internal IP, in case of my VPS on Google Cloud, it returns an internal IP. On the same node, enter:
 ```
 ./bet dcv 10.166.0.13
 ```
 this node is going to be the DCV.
-On a 2nd node (this is going to be the BVV), enter:
+On a 2nd node (this is going to be the BVV - Blinding Value Vendor), enter:
 ```
 ./bet bvv 35.228.250.250
 ```
@@ -183,30 +183,44 @@ cmake ..
 make && sudo make install
 sudo ldconfig /usr/local/lib
 ```
-Switch to **rest_dev** branch then compile:
+Navigate to bet/privatebet folder, switch to **test** branch then compile:
 ```
 cd ~/bet/privatebet
-git checkout rest_dev
+git checkout test
 make
 ```
-Navigate into pangea-poker folder
+Clone the front-end repo https://github.com/norbertdragan/chips-poker-frontend on the same back-end node we are setting up, or on your local PC
 ```
-cd ~/pangea-poker-frontend/client
-git checkout poker
-nano pangeapoker.js
+cd ~
+git clone https://github.com/norbertdragan/chips-poker-frontend.git
 ```
-Navigate to this line https://github.com/sg777/pangea-poker-frontend/blob/poker/client/pangeapoker.js#L521 by pressing **CTRL + :** then enter 521 + ENTER, replace the existing IP by your DCV node's public IP:
+Install NodeJS & NPM on your machine: https://nodejs.org/en/download/
+Install npm dependencies & wait for the installation to finish
 ```
-pangea.wsURI = 'ws://159.69.23.30:9000'//'ws://localhost:9000'
+cd ~/chips-poker-frontend
+npm install
+npm audit fix
 ```
-Then also replace th DCV & PLAYERS IP with your nodes's IP:
+Create a .env file that contains your nodes IP (you can skip this step and later manually enter your nodes IP later in the app):
 ```
-pangea.wsURI_bvv = 'ws://159.69.23.31:9001'
-pangea.wsURI_player1 = 'ws://159.69.23.28:9002'
-pangea.wsURI_player2 = 'ws://159.69.23.29:9003'
+DEV_SOCKET_URL_DCV="<DCV_IP>"
+DEV_SOCKET_URL_BVV="<BVV_IP>"
+DEV_SOCKET_URL_PLAYER1="<PL1_IP>"
+DEV_SOCKET_URL_PLAYER2="<PL2_IP>"
 ```
-Then save the files.
-Head back to the bet/privatebet folder, enter **./bet** on all four nodes.
+Launch the app
+```
+npm start
+```
+On Windows, if you run into this error ""NODE_ENV" is not recognized as an internal or external command, operable command or batch file", install this module below:
+```
+npm install -g win-node-env
+```
+then relaunch the app with "npm start"
+
+After a few seconds, the app will automatically open a new tab on your browser (http://localhost:1234/), if your front-end is hosted on your local machine. If it is hosted on 1 of your back-end node, simply replace "localhost" by its IP address, then enter the full URL in your browser.
+ 
+
 ```
 cd ~/bet/privatebet
 ./bet
