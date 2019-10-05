@@ -90,7 +90,8 @@ returned result:
 		{ "txid" : "f9aeeaee05aff0ae9600dd2bb7e0fc2bacb2f0dc6a34208470082fe7198dcb6e", "output" : 0, "value" : 10000000, "status" : "confirmed" } ], 
 		"channels" : [  ] }
 ```
-then, on all 4 nodes:
+#### At this point, continue the instructions if you're going for the full setup with 4 nodes, otherwise if you're going to be a dealer or a player, skip to step 4. 
+On all 4 nodes:
 ```
 cd ~
 cd bet/privatebet
@@ -169,7 +170,7 @@ Now open a 2nd SSH instance on your BVV node and enter **lightning-cli listfunds
 This time you should see **CHANNELD_AWAITING_LOCKIN** on the BVV node, wait for a moment, the game should be ready.
 ![Game's ready](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/master/img/game%20ready.JPG)
 Follow the instructions the play the game, the unit is in milli-satoshi. Press **CTRL + C** to quit.
-### 4) Playing with the web GUI on bet, rest_dev branch (to be update)
+### 4) Playing with the web GUI:
 After establishing the channels & veryfing the cli works correctly, we can now try to play via the web GUI.
 First you need to install libwebsockets:
 ```
