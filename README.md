@@ -212,20 +212,50 @@ Launch the app
 ```
 npm start
 ```
-On Windows, if you run into this error ""NODE_ENV" is not recognized as an internal or external command, operable command or batch file", install this module below:
+On Windows, if you run into this error **NODE_ENV** is not recognized as an internal or external command, operable command or batch file", install this module below:
 ```
 npm install -g win-node-env
 ```
-then relaunch the app with "npm start"
+then relaunch the app with **npm start**
 
 After a few seconds, the app will automatically open a new tab on your browser (http://localhost:1234/), if your front-end is hosted on your local machine. If it is hosted on 1 of your back-end node, simply replace "localhost" by its IP address, then enter the full URL in your browser. You will see:
  ![init_ip](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/INIT%20IP.JPG)
-The IP field should be pre-filled with the values specified in your .env , otherwise you can just manually enter the IP of your nodes.
+The IP field should be pre-filled with the values specified in your .env , otherwise you can just manually enter the IP of your nodes. Don't click on setNodes just yet !
 #### At this point, it depends on whether you are a dealer, player or both (self-test). If you are a player, you need to find another player to play with and a dealer, and vice versa, send us a message so we can arrange players so you can play together.
-#### If you have 4 nodes, you can test the game by playing with yourself & being the dealer at the same time, I'll update the instructions later, you can also send me a DM in Discord: 
+#### If you have 4 nodes, you can test the game by playing with yourself & being the dealer at the same time:
+On your 4 backend nodes, navigate to ~/bet/privatebet and launch bet with the proper parameters:
+on DCV:
+```
+cd ~/bet/privatebet
+./bet dcv <IP_of_DCV>
+```
+Again, on DCV, this <IP_of_DCV> value must be the same as the one returned by **hostname -I**, whether it is internal/private or external/public
+
+on BVVV:
+```
+cd ~/bet/privatebet
+./bet bvv <PUBLIC_IP_of_DCV>
+```
+on Player 1:
+```
+cd ~/bet/privatebet
+./bet player <PUBLIC_IP_of_DCV>
+```
+on Player 2:
+```
+cd ~/bet/privatebet
+./bet player <PUBLIC_IP_of_DCV>
+```
+Now back to the app on your browser, open 2 more instances of it (1 will be used as the dealer & the other 2 as player).
+Click on **Dealer** button, verify your DCV & BVV IP are correct (all IP should be public), then click on **Set Nodes**.
+Then once connection status with DCV & BVV are both **connected**, click on the **Start** button.
 ![dealer_ip](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/dealer%20IP.JPG)
 ![dealer_table](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/Dealer.JPG)
+On the 2nd browser tab, click on **Player1** button, verify that the IP is correct or manually edit it, then click on **Set Nodes**. 
+Once the connection status is **Connected**, click on **Sit Here**
 ![pl1_sit](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/PLA1%20SIT.JPG)
+Repeat the same steps for **Player2** on the 3rd browser tab. 
 ![pl2_sit](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/PLA2%20SIT.JPG)
+The game will initilize and you can start playing against yourself
 ![players_table](https://raw.githubusercontent.com/NOCTLJRNE/CHIPS-tuto/beta/img/2%20PLA%20TURN.JPG)
 
